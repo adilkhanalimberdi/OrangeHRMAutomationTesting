@@ -7,8 +7,8 @@ class BasePage:
         self.driver = driver
         self.base_url = "https://opensource-demo.orangehrmlive.com/web/index.php/"
 
-    def open(self):
-        return self.driver.get(self.base_url)
+    def open(self, path=""):
+        return self.driver.get(self.base_url + path)
 
     def find_element(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(
