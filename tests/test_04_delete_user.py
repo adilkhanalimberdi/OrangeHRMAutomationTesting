@@ -1,10 +1,12 @@
+import pytest
 from pages.user_management_page import UserManagementPage
 
 
-def test_add_user(driver):
+@pytest.mark.regression
+def test_delete_user(driver):
     user_management_page = UserManagementPage(driver)
     user_management_page.open()
 
-    user_management_page.add_random_user()
+    user_management_page.delete_first_user()
 
     assert user_management_page.check_if_success()

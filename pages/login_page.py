@@ -16,5 +16,8 @@ class LoginPage(BasePage):
     def click_login(self):
         self.find_element(self.LOGIN_BUTTON).click()
 
-        from pages.dashboard_page import DashboardPage
-        return DashboardPage(self.driver)
+        if "dashboard" in self.driver.current_url:
+            from pages.dashboard_page import DashboardPage
+            return DashboardPage(self.driver)
+        else:
+            return self.driver
