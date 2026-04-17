@@ -3,7 +3,7 @@
 ---
 This is an automated testing suite for the OrangeHRM demo website. The project is built using the **Page Object Model (POM)** design pattern to ensure scalability, maintainability, and clean code structure.
 
-### You can find this website here - https://opensource-demo.orangehrmlive.com/web/index.php
+#### You can find this website here - https://opensource-demo.orangehrmlive.com/web/index.php
 
 ## Tech Stack:
 - **Language**: Python
@@ -17,6 +17,13 @@ The project is organized to separate test logic from page-specific interactions:
 - `tests/` — Contains Test Suites. High-level scripts that execute test scenarios and verify outcomes.
 - `conftest.py` — Pytest configuration file managing Fixtures (e.g., WebDriver initialization and teardown).
 - `pytest.ini` — Configuration file for registering custom test markers and CLI defaults.
+
+## Implemented Test Scenarios
+1. **Authentication**: Verifies successful authentication and ensures correct deletion.
+2. **User Management**: Creates user and successfully ensures deletion.
+3. **Personal Information Management**: Changes personal information like fullname, birthdate and so on.
+4. **Publication Functionality**: Publishes content by retrieving data from an external API and posting it automatically.
+5. **Search Functionality**: Searches an employee from directory using name, job title and location.
 
 ## Installation
 
@@ -65,8 +72,3 @@ pytest -m regression
 ```bash
 pytest -v
 ```
-
-## Implemented Test Scenarios
-1. **Login Functionality**: Verifies successful authentication with valid credentials.
-2. **User Management**: Creates user and successfully ensures deletion
-3. **Logout**: Ensures the user session is terminated correctly and redirects to the login page.

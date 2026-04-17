@@ -1,6 +1,8 @@
+import pytest
 from pages.user_management_page import UserManagementPage
 
 
+@pytest.mark.regression
 def test_add_user(driver):
     user_management_page = UserManagementPage(driver)
     user_management_page.open()
